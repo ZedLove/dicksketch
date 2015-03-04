@@ -1,0 +1,119 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900);
+      * {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      body {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: auto;
+        background: #a5a5a5;
+        font-family: 'Lato', sans-serif;
+      }
+      .wrapper {
+        display: block;
+        width: 100%;
+        height: 710px;
+        margin: 0 auto;
+      }
+      .controllers {
+        width: 175px;
+        margin: 20px auto 0;
+        font-size: 0.8em;
+        color: #333;
+        position: absolute;
+        background: #ddd;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+      .controller {
+        display: inline-block;
+        background: #eee;
+        border: 1px solid #e7e7e7;
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      .options > label,
+      .options > input {
+        display: block;
+        width: 100%;
+      }
+      
+      /* added to avoid calculating for border when getting canvas width */
+      .canvas-border {
+        position: relative;
+        margin: 30px auto 0;
+        width: 606px;
+        height: 606px;
+        border: 3px solid orange;
+      }
+
+      .progress {
+        /*display: none;*/
+        opacity: 0;
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        right: 25%;
+        bottom: 0;
+        width: 50%;
+        height: 5rem;
+        background: #c1c1c1;
+        color: #ffffff;
+        border: 1px solid #161616;
+        padding: 0.5rem 1rem;
+      }
+
+        .progress > h2,
+        .progress > p {
+          margin: 0 auto;
+          text-align: center;
+          width: 80%;
+        }
+
+      .sketch {
+        display: block;
+        margin: 0 auto 20px;
+        background: rgba(255, 255, 255, 1);
+        cursor: default;
+      }
+
+
+      .history-img {
+        margin: 0 auto;
+        border: 1px solid black;
+        height: 300px;
+        width: 300px;
+        overflow-y: scroll;
+      }
+
+        .history-img > img {
+          display: block;
+          width: 100%;
+        }
+
+
+      /* DEMO STYLE */
+
+      .demo {
+        margin-top: 150px;
+        width: 100%;
+        height: 400px;
+      }
+
+      .preview-sketch {
+        display: none;
+        margin: 0 auto 20px;
+        background: none;
+        border: 5px solid orange;
+        cursor: default;
+      }
