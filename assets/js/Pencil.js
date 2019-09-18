@@ -249,13 +249,11 @@ this.reset = function() {
 this.export = function() {
   if (pencil.frames.length !== 0) {
     console.log('exporting with web worker');
-    var worker = new Worker('doWork.js');
-
-    worker.addEventListener('message', function(e) {
+    var worker = new Worker('assets/js/export.js');
+    worker.addEventListener('onmessage', function(e) {
       console.log('Worker said: ', e.data);
     }, false);
-
-    worker.postMessage('Hello World');
+    worker.postMessage({frames: pencil.frames, height: canvas.height, width: canvas.width});
   }
   else {
     alert('nothing to export');

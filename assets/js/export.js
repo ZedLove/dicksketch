@@ -1,6 +1,23 @@
-var Export = function() {
+self.onmessage = function(e) {
 
-    self.addEventListener('message', function(e) {
+  var encoder   = new GIFEncoder();
+  // need to import GIFEncoder
+
+  encoder.setRepeat(0);
+  encoder.setDelay(150);
+  encoder.start();
+  // using imgDataArray, must call setSize()
+  encoder.setSize( e.data.width, e.data.height );
+
+  // Send message to main file
+  self.postMessage(workerResult);
+}
+
+/*
+var Export = function () {
+
+    self.addEventListener('onmessage', function(e) {
+      console.log("onmessage export");
       self.postMessage(e.data);
     }, false);
   
@@ -76,4 +93,4 @@ var Export = function() {
 
   // // THEN, set the src
   // img.src = data_url;
-};
+//};
